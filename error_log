@@ -1,0 +1,2 @@
+[05-Sep-2023 01:55:48 Asia/Istanbul] PHP Fatal error:  Cannot redeclare App\Console\Commands\KeepQueueRunning::$signature in /home1/gemllbmy/public_html/narjesalsham/app/Console/Commands/KeepQueueRunning.php on line 22
+[05-Sep-2023 01:56:02 Asia/Istanbul] PHP Fatal error:  Cannot redeclare App\Console\Commands\KeepQueueRunning::$signature in /home1/gemllbmy/public_html/narjesalsham/app/Console/Commands/KeepQueueRunning.php on line 22

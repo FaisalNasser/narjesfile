@@ -1,0 +1,26 @@
+import:
+  - recipe/laravel.php
+
+config:
+  application: "restaurant"
+  repository: "https://github.com/Qualitey/restaurant.git"
+  http_user: restaurant
+
+hosts:
+  stage:
+    remote_user: restaurant
+    hostname: "restaurant.qualitey.com"
+    deploy_path: "/home/resturant"
+    writable_mode: chmod
+
+tasks:
+  deploy:
+    - deploy:prepare
+    - deploy:vendors
+    - artisan:storage:link
+    - artisan:optimize:clear
+    # - artisan:migrate
+    - deploy:publish
+
+after:
+  deploy:failed: deploy:unlock
